@@ -1,38 +1,106 @@
-.App {
-  text-align: center;
+@import "~antd/dist/antd.css";
+* {
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.ant-layout {
+  height: 100%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.ant-layout-content {
+  background-color: white;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.ant-layout-header {
+  background-color: black;
+  margin-bottom: 3px;
+}
+.ant-layout-sider {
+  background-color: black;
+}
+.ant-menu {
+  color: white;
+  background-color: black;
+}
+.ant-menu-item,
+.ant-menu-submenu-title {
+  background-color: grey;
+}
+.ant-menu-submenu-title {
+  background-color: black;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.employee-info {
+  background-color: rgb(73, 68, 68);
+  color: white;
+  border-radius: 10px;
+  margin: 1px;
+  flex-wrap: nowrap;
+}
+.employee-input {
+  width: 200px;
+  outline: 2px solid rgb(82, 184, 82);
+  outline-style: groove;
+}
+.employee-info-title {
+  padding: 3%;
+}
+.employee-info-heading {
+  justify-content: center;
+  font-weight: bold;
+}
+.employee-info-left {
+  background-color: rgb(73, 68, 68);
+  padding: 1%;
+  margin-right: 3px;
+  border-radius: 10px;
+  min-height: 550px;
+}
+.employee-info-right {
+  background-color: rgb(73, 68, 68);
+  margin-left: 3px;
+  padding: 1%;
+  border-radius: 10px;
+  min-height: 600px;
+}
+.green-border {
+  border: 3px rgb(82, 184, 82) solid;
+  border-radius: 10px;
+  margin: 15px;
+  padding: 50px;
+}
+.ant-picker-calendar {
+  padding: 5%;
+  border-radius: 10px;
+  margin: 5px;
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1%;
+}
+.form-input {
+  flex-grow: 1;
+  width: 100%;
+  margin: 3%;
+  border: 3px solid rgb(82, 184, 82);
+  border-radius: 10px;
+}
+.form-checkbox {
+  padding: 4%;
+  margin: 3%;
+  border: 3px solid rgb(82, 184, 82);
+  border-radius: 10px;
+}
+.all-day {
+  margin: 2% 0 3px 0 ;
+}
+.button {
+  background-color: rgb(82, 184, 82);
+  color: white;
+  border-radius: 10px;
+  margin: 3px 0 0 5px;
+  width:100%;
+  height:85%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.map {
+  margin-left: 5%;
 }

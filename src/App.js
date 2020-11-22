@@ -1,23 +1,47 @@
-import logo from './logo.svg';
 import './App.css';
+import { Layout, Typography, Avatar, Row, Col, Image } from 'antd';
+import SidebarMenu from './components/SidebarMenu';
+import LeftGrid from './components/LeftGrid';
+import RightGrid from './components/RightGrid';
+
 
 function App() {
+  const { Header, Footer, Sider, Content } = Layout;
+  const { Title } = Typography;
+
+
+  // let handleClick = e => {
+  //   console.log('click ', e);
+  // };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Layout>
+        <Header>
+          <Image
+            width={100}
+            src="./logo.svg"
+          />
+          {/* <Row gutter={[5, 0]}>
+            <Col>     <Image
+              width={100}
+              src="./logo.svg"
+            /></Col>
+          </Row> */}
+        </Header>
+        <Layout>
+          <Sider>
+            <SidebarMenu />
+          </Sider>
+          <Layout>
+            <Content>
+              <Row>
+               <LeftGrid />
+              <RightGrid />   
+              </Row>
+            </Content>
+          </Layout>
+        </Layout>
+      </Layout>
     </div>
   );
 }
